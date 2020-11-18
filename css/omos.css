@@ -103,7 +103,17 @@ nav {
 
 /*------ om os section ---- */
 
-.grid-container {
+.grid-container,
+.first,
+.second,
+.third,
+.fourth,
+.fifth,
+.sixth {
+    display: none;
+}
+
+.section_header1 {
     display: none;
 }
 
@@ -116,9 +126,9 @@ nav {
 
 .omos_image {
     max-width: 95%;
-justify-items: center;
+    justify-items: center;
     margin-bottom: 30px;
-margin-left: 10px;
+    margin-left: 10px;
     margin-right: 10px;
 }
 
@@ -177,71 +187,80 @@ margin-left: 10px;
         height: 350px;
         margin: 30px;
 
-    transition: 1.5s;
-    overflow: hidden;
+        transition: 1.5s;
+        overflow: hidden;
+    }
+
+    .omos_image:hover {
+        filter: blur(0px);
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+.section_header1 {
+
+    margin: 30px;
+    text-align: center;
 }
-.omos_image:hover{
-    filter: blur(0px);
-    transform: scale(1.05);
-    opacity: 1;
+
+
+.grid-container {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-template-areas:
+        "first second"
+        "third fourth"
+        "fifth sixth";
 }
-    }
 
-    .section_header1 {
+.first {
+    display: grid;
+    grid-area: first;
+    justify-self: end;
+    margin-right: 25px;
+}
 
-        margin: 30px;
-     text-align: center;
-    }
-    .grid-container {
+.second {
+    display: grid;
+    grid-area: second;
+    justify-self: start;
+    margin-top: 200px;
+    margin-left: 25px;
+}
 
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+.third {
+    display: grid;
+    grid-area: third;
+    justify-self: end;
+    margin-right: 25px;
+}
 
-        grid-template-areas:
-            "first second"
-            "third fourth"
-            "fifth sixth";
-    }
+.fourth {
+    display: grid;
+    grid-area: fourth;
+    justify-self: start;
+    margin-top: 200px;
+    margin-left: 25px;
+}
 
-    .first {
-        grid-area: first;
-        justify-self: end;
-        margin-right: 25px;
-    }
+.fifth {
+    display: grid;
+    grid-area: fifth;
+    justify-self: end;
+    margin-right: 25px;
+    margin-left: 25px;
+}
 
-    .second {
-        grid-area: second;
-        justify-self: start;
-        margin-top: 200px;
-        margin-left: 25px;
-    }
+.sixth {
+    display: grid;
 
-    .third {
-        grid-area: third;
-        justify-self: end;
-        margin-right: 25px;
-    }
-
-    .fourth {
-        grid-area: fourth;
-        justify-self: start;
-        margin-top: 200px;
-         margin-left: 25px;
-    }
-
-    .fifth {
-        grid-area: fifth;
-        justify-self: end;
-        margin-right: 25px;
-         margin-left: 25px;
-    }
-
-    .sixth {
-        grid-area: sixth;s
-        justify-self: start;
-        margin-top: 200px;
-    }
+    grid-area: sixth;
+    justify-self: start;
+    margin-top: 200px;
+}
 
 
 }

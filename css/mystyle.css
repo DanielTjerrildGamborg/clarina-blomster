@@ -237,6 +237,7 @@ nav {
 
 .omos_image {
 height: 265px;
+max-width: 100%;
 align-content: center;
 margin-top: 30px;
 margin-bottom: 15px;
